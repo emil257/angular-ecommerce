@@ -1,0 +1,32 @@
+<div class="col mb-4">
+  <!-- Card -->
+  <div class="card">
+    <!--Card image-->
+
+    <div class="view overlay">
+      <img class="card-img-top" [src]="product.image" alt="Card image cap" />
+      <a routerLink="">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+      <!--Title-->
+      <h4 class="card-title">{{product.name}}</h4>
+      <!--Text-->
+      <span class="red-text font-weight-bold">
+        <strong>{{product.price.toLocaleString('en-EN')}} SEK</strong>
+      </span>
+      <p class="card-text">{{product.short}}</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <!-- <button
+        type="button"
+        class="btn btn-light-blue btn-md"
+        v-on:click="addItem(item)"
+      >add to cart</button>-->
+    </div>
+    <a [routerLink]="'/product/' + product._id" class="btn btn-light-blue btn-md">Visa product</a>
+  </div>
+  <!-- Card -->
+</div>

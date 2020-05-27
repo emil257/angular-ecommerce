@@ -1,0 +1,10 @@
+<div>
+  <div *ngIf="user === null" class="py-1 px-2 d-flex justify-content-between align-items-center flex-column">
+    <a routerLink="/profile/login"><button class="btn btn-info btn-block closeNav">Login</button></a>
+  </div>
+  <div *ngIf="user !== null" class="d-flex justify-content-between align-items-center flex-column">
+    <i class="fas fa-user-circle fa-4x text-muted my-2"></i>
+    <span class="mt-1">{{ user.firstName }}</span>
+    <button class="btn btn-link closeNav" (click)="logout()">Logout</button>
+  </div>
+</div>
